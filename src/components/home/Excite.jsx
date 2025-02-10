@@ -8,7 +8,7 @@ const Excite = () => {
        <p className=' text-[22px] font-[400] text-black font1'>You receive updates, special offers, and insider news as we prepare to open our doors. You’ll be the first to know about our progress, events, and opportunities to get involved.</p>
        <div className=' bg-white py-3 px-3 rounded-md flex items-center'>
         <input type="text" placeholder='enter your email address' className=' bg-transparent py-3 px-6 font1  w-full' />
-        <button className=' bg-black py-3 px-6 text-white md:w-[30%] w-[40%]'>Get Start</button>
+        <button className=' bg-black py-3 px-6 text-white md:w-[30%]'>Get Start</button>
        </div>
        </div>
        <img src={excite} alt="" />

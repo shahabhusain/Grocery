@@ -7,7 +7,7 @@ const Cooporative = () => {
 
   return (
     // background image bg-2
-    <div className="bg-2 md:mt-32 mt-[352px]">
+    <div className="bg-2 md:h-[922px] h-[757px] md:mt-32 mt-[352px]">
       <div className="flex flex-col md:flex-row items-center justify-between w-[90%] mx-auto md:gap-24 gap-8 ">
         <h1 className="text-[40px] mt-20">What’s a Cooperative?</h1>
         <p className="text-[22px] font1 font-[400] md:mt-20">

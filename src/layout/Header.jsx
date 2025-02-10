@@ -11,7 +11,7 @@ const Header = () => {
     <div className="py-3 bg-white sticky top-0 z-[1000] shadow-md">
       <div className="flex items-center justify-between w-[90%] mx-auto">
         {/* Logo */}
-        <img className="cursor-pointer w-[100px]" src={logo} alt="Logo" />
+        <img className="cursor-pointer md:w-[100px] w-[60px]" src={logo} alt="Logo" />
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center gap-6">
