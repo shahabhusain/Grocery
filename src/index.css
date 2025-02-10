@@ -1,0 +1,60 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap');
+@import "tailwindcss";
+
+body{
+    font-family: "DM Serif Display", serif;
+    max-width: 1550px;
+    margin: 0 auto;
+}
+
+
+    .font1{
+        font-family: "Roboto", serif;
+    }
+
+    .bg-1 {
+        background-image: url(../src/assets/hero.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 722px;
+    }
+
+    .bg-2 {
+        background-image: url(../src/assets/coor.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 922px;
+    }
+
+    .bg-3 {
+        background-image: url(../src/assets/coor2.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 722px;
+        background-color: black;
+    }
+
+    
+    .bg-4 {
+        background-image: url(../src/assets/image.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 722px;
+        background-color: black;
+    }
+
+    .bg-5 {
+        background-image: url(../src/assets/partner.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 722px;
+        background-color: black;
+    }
