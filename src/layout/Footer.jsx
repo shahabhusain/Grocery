@@ -7,7 +7,7 @@ import { IoLocationSharp } from "react-icons/io5";
 const Footer = () => {
   return (
     <div className='bg-black px-12 py-20 mt-32'>
-         <div className=' flex justify-between '>
+         <div className=' flex flex-col md:flex-row md:gap-0  gap-12 justify-between '>
         <div className=' flex flex-col gap-6'>
             <img className=' w-[140px]' src={logo} alt="" />
             <p className=' text-[20px] font-[400] text-white max-w-[555px]'>The Front Porch Grocery Cooperative is more than just a store; it’s a community effort to create something lasting and meaningful.</p>

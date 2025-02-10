@@ -2,7 +2,7 @@ import { FaStarOfLife } from "react-icons/fa6";
 
 const Form = () => {
     return (
-      <div className="w-[80%] mx-auto py-12">
+      <div className="md:w-[80%] w-[90%] mx-auto py-12">
         <form className="space-y-6">
             <div className=" flex flex-col gap-2">
                 <h1 className=" text-[17px] font-[700] font1 flex items-center gap-1">Name <FaStarOfLife size={5} className=" text-[#CF3339]" /></h1>
@@ -118,8 +118,8 @@ const Form = () => {
           </div>
           
           <div className="flex justify-center space-x-4 mt-12">
-            <button className="bg-green-600 text-white text-[20px] font-bold py-2 px-12 rounded-full font1 cursor-pointer">PayPal</button>
-            <button className="bg-green-700 text-white text-[20px] font-bold py-2 px-12 rounded-full font1 cursor-pointer">Pay Later</button>
+            <button className="bg-green-600 text-white md:text-[20px] text-[15px] md:font-bold py-2 px-12 rounded-full font1 cursor-pointer">PayPal</button>
+            <button className="bg-green-700 text-white md:text-[20px] text-[15px] md:font-bold py-2 px-12 rounded-full font1 cursor-pointer">Pay Later</button>
           </div>
         </form>
       </div>

@@ -4,9 +4,9 @@ const Contact = () => {
   return (
     <div className="w-[90%] mx-auto py-12 px-4 md:px-0">
       <h2 className="text-[45px] font-bold mb-6">Contact us</h2>
-      <div className=" flex justify-between">
+      <div className=" flex flex-col md:flex-row justify-between">
         {/* Contact Form */}
-        <form className="space-y-4  w-[60%]">
+        <form className="space-y-4  md:w-[60%] w-[90%]">
           <div className="grid grid-cols-2 gap-4">
             <div className=" flex flex-col gap-2">
               <label className="block font-medium mb-1 font1">Name</label>
@@ -24,7 +24,7 @@ const Contact = () => {
         </form>
 
         {/* Contact Information */}
-        <div className=" flex flex-col gap-6 w-[30%]">
+        <div className=" flex flex-col gap-6 md:w-[30%] w-[90%] md:mt-0 mt-12">
           <div className="flex items-center space-x-3 font1">
             <FaPhone className="text-green-600" />
             <p>+001 22 333 456</p>

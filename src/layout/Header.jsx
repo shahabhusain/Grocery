@@ -1,25 +1,92 @@
-import React, { useState } from 'react'
-import logo from '../assets/logo.png'
-import { Link } from 'react-router-dom'
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import logo from "../assets/logo.png";
+import { FaBars, FaTimes } from "react-icons/fa"; // Icons for mobile menu
+
 const Header = () => {
-    const [open, setOpen] = useState(1)
+  const [open, setOpen] = useState(1);
+  const [mobileOpen, setMobileOpen] = useState(false);
+
   return (
-    <div className=' py-1 bg-white sticky top-0 z-[1000]'>
-      <div className='flex items-center justify-between w-[90%] mx-auto'>
-      <img className=' cursor-pointer' src={logo} alt="" />
-        <div className=' flex items-center gap-6'>
-            <ul className=' flex items-center gap-6'>
-                <Link to="/" onClick={() =>setOpen(1)} className={`text-[22px] font-[500]  cursor-pointer ${open === 1 ? " text-[#008B47]" : "text-[#000]"}`}>Home</Link>
-                <Link to="/about" onClick={() =>setOpen(2)} className={`text-[22px] font-[500]  cursor-pointer ${open === 2 ? " text-[#008B47]" : "text-[#000]"}`}>About</Link>
-                <Link to="/join" onClick={() =>setOpen(3)} className={`text-[22px] font-[500]  cursor-pointer ${open === 3 ? " text-[#008B47]" : "text-[#000]"}`}>Join Us</Link>
-                <Link to="/community" onClick={() =>setOpen(4)} className={`text-[22px] font-[500]  cursor-pointer ${open === 4 ? " text-[#008B47]" : "text-[#000]"}`}>Community Partners</Link>
-                <Link to="/member" onClick={() =>setOpen(5)} className={`text-[22px] font-[500]  cursor-pointer ${open === 5 ? " text-[#008B47]" : "text-[#000]"}`}>Members</Link>
-            </ul>
-            <button className=' py-2 px-6 rounded-md bg-[#008B47] text-white text-[22px] cursor-pointer'>Account</button>
+    <div className="py-3 bg-white sticky top-0 z-[1000] shadow-md">
+      <div className="flex items-center justify-between w-[90%] mx-auto">
+        {/* Logo */}
+        <img className="cursor-pointer w-[100px]" src={logo} alt="Logo" />
+
+        {/* Desktop Navigation */}
+        <div className="hidden md:flex items-center gap-6">
+          <ul className="flex items-center gap-6">
+            {[
+              { name: "Home", path: "/" },
+              { name: "About", path: "/about" },
+              { name: "Join Us", path: "/join" },
+              { name: "Community Partners", path: "/community" },
+              { name: "Members", path: "/member" },
+            ].map((item, index) => (
+              <Link
+                key={index}
+                to={item.path}
+                onClick={() => setOpen(index + 1)}
+                className={`text-[20px] font-[500] cursor-pointer ${
+                  open === index + 1 ? "text-[#008B47]" : "text-[#000]"
+                }`}
+              >
+                {item.name}
+              </Link>
+            ))}
+          </ul>
+          <button className="py-2 px-6 rounded-md bg-[#008B47] text-white text-[20px] cursor-pointer">
+            Account
+          </button>
+        </div>
+
+        {/* Mobile Menu Button */}
+        <div className="md:hidden">
+          {mobileOpen ? (
+            <FaTimes
+              className="text-3xl text-[#008B47] cursor-pointer"
+              onClick={() => setMobileOpen(false)}
+            />
+          ) : (
+            <FaBars
+              className="text-3xl text-[#008B47] cursor-pointer"
+              onClick={() => setMobileOpen(true)}
+            />
+          )}
         </div>
       </div>
-    </div>
-  )
-}
 
-export default Header
+      {/* Mobile Navigation Menu */}
+      {mobileOpen && (
+        <div className="md:hidden flex flex-col items-center gap-4 py-4 bg-white shadow-lg">
+          {[
+            { name: "Home", path: "/" },
+            { name: "About", path: "/about" },
+            { name: "Join Us", path: "/join" },
+            { name: "Community Partners", path: "/community" },
+            { name: "Members", path: "/member" },
+          ].map((item, index) => (
+            <Link
+              key={index}
+              to={item.path}
+              onClick={() => {
+                setOpen(index + 1);
+                setMobileOpen(false);
+              }}
+              className={`text-[20px] font-[500] cursor-pointer ${
+                open === index + 1 ? "text-[#008B47]" : "text-[#000]"
+              }`}
+            >
+              {item.name}
+            </Link>
+          ))}
+          <button className="py-2 px-6 rounded-md bg-[#008B47] text-white text-[20px] cursor-pointer">
+            Account
+          </button>
+        </div>
+      )}
+    </div>
+  );
+};
+
+export default Header;

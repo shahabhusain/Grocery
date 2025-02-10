@@ -2,7 +2,7 @@ import React from 'react'
 
 const Benefit = () => {
   return (
-    <div className='bg-[#5F84B6] pl-12 py-12 mt-32'>
+    <div className='bg-[#5F84B6] md:pl-12 px-4 py-12 mt-32'>
         <h1 className=' text-[40px] font-[400] text-white'>Membership Benefits</h1>
 
         <div className=' flex flex-col gap-7 max-w-[766px] text-white'>
